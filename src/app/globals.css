@@ -8,19 +8,49 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent: #00aa53;
+  --color-accent-darker: #005f2f;
+
+  --color-neutral-lightest: hsl(0, 0%, 95%);
+  --color-neutral-lighter: hsl(0, 0%, 93%); 
+  --color-neutral-light: hsl(0, 0%, 91%) ;
+  --color-neutral: hsl(0, 0%, 89%);
+  --color-neutral-dark: hsl(0, 0%, 20%);
+  --color-neutral-darker: hsl(0, 0%, 15%);
+  --color-neutral-darkest: hsl(0, 0%, 10%);
+
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-headline: "Roboto Condensed", serif;
+  --breakpoint-desktop: 1200px;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+
+  --text-base: 1rem;
+  --text-base--line-height: 1.5rem;
+  --text-base--line-spacing: 0.01em;
+  --text-base-font-weight: 500;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  font-size: 20px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-style: italic;
+  line-height: 120%;
+  text-transform: uppercase;
+  @apply font-headline;
 }
